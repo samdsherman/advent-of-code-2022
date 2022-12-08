@@ -42,7 +42,7 @@ Find the Elf carrying the most Calories. How many total Calories is that Elf car
 import { getInput } from "./util.js"
 const input = await getInput(1)
 
-const elves = input.toString().split('\n\n').map(elf => {
+const elves = input.split('\n\n').map(elf => {
   const food = elf.split('\n').map(Number)
   const total = food.reduce((sum, val) => val + sum)
   return total
